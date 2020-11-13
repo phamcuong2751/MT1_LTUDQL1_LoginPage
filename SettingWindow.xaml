@@ -1,0 +1,62 @@
+﻿<Window x:Class="_18600038.SettingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_18600038"
+        mc:Ignorable="d" WindowStyle="None"
+        ResizeMode="NoResize"
+        Loaded="Window_Loaded"
+        WindowStartupLocation="CenterScreen"
+        RenderOptions.BitmapScalingMode="HighQuality"
+        Title="SettingWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="./Image/background_setting.png"/>
+        </Grid.Background>
+
+        <StackPanel Margin="60 30">
+            <Image Source="./Image/logo.png" Height="60"
+                   HorizontalAlignment="Left"/>
+            <DockPanel Margin="0 70 0 0">
+                <TextBlock Text="SERVER:" 
+                           FontSize="20"
+                           Width="115" Foreground="#5B4DCD"/>
+                <TextBox Name="box_Server"
+                         HorizontalAlignment="Left" 
+                         Width="185" VerticalContentAlignment="Center"
+                         Foreground="#5B4DCD"/>
+            </DockPanel>
+            <DockPanel Margin="0 40 0 0">
+                <TextBlock Text="DATABASE:" 
+                           FontSize="20"
+                           Width="115" Foreground="#5B4DCD"/>
+                <TextBox Name="box_Database" 
+                         HorizontalAlignment="Left" 
+                         Width="185" VerticalContentAlignment="Center"
+                         Foreground="#5B4DCD"/>
+            </DockPanel>
+
+            <DockPanel Margin="0 40 0 0">
+                <Border Height="40" CornerRadius="20" 
+                        Background="#8360F7" Width="80">
+                    <Button Content="OK" BorderThickness="0" IsDefault="True"
+                            Background="Transparent" FontWeight="Bold"
+                            FontSize="20" Foreground="#F3EAF5"
+                            Style="{StaticResource TabButton}"
+                            Click="OK_Button"/>
+                </Border>
+                
+                <Border Height="40" CornerRadius="20" Margin="50 0 0 0"
+                        Background="#8360F7" Width="100"
+                        HorizontalAlignment="Left">
+                    <Button Content="Cancel" BorderThickness="0" 
+                            Click="Close_Window" IsCancel="True"
+                            Background="Transparent" FontWeight="Bold"
+                            FontSize="20" Foreground="#F3EAF5"
+                            Style="{StaticResource TabButton}"/>
+                </Border>
+            </DockPanel>
+        </StackPanel>
+    </Grid>
+</Window>
